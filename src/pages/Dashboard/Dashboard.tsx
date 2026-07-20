@@ -20,6 +20,7 @@ return (
 
 <div
 style={{
+display:"flex",
 minHeight:"100vh",
 background:"linear-gradient(135deg,#020617,#0f172a,#1e3a8a)",
 padding:"40px",
@@ -28,12 +29,21 @@ color:"#fff"
 }}
 >
 
+<aside
+style={{
+width:"260px",
+background:"#0f172a",
+padding:"30px 20px",
+color:"#fff",
+minHeight:"100vh"
+}}
+>
+
 <Link
 to="/"
 style={{
-color:"#ffffff",
-textDecoration:"none",
-fontWeight:700
+color:"#fff",
+textDecoration:"none"
 }}
 >
 <h2>
@@ -41,15 +51,44 @@ fontWeight:700
 </h2>
 </Link>
 
-<p
-style={{
-color:"#94a3b8",
-marginBottom:"25px"
-}}
->
+<p style={{color:"#94a3b8"}}>
 Workforce Intelligence Platform
 </p>
 
+{[
+"📊 Executive Dashboard",
+"👤 Employee 360",
+"🧩 Skill Gap Analysis",
+"🤖 AI Recommendation",
+"👥 Human Review",
+"📂 Dataset Comparison",
+"⚙ Data Pipeline",
+"🎯 Platform Strategy",
+"ℹ About"
+].map(item=>(
+<div
+key={item}
+style={{
+padding:"14px",
+marginTop:"8px",
+borderRadius:"10px",
+background:item.includes("Executive")
+?"#2563eb"
+:"transparent"
+}}
+>
+{item}
+</div>
+))}
+
+</aside>
+
+<main
+style={{
+flex:1,
+padding:"40px"
+}}
+>
 
 <h1 style={{fontSize:"38px"}}>
 Executive Dashboard

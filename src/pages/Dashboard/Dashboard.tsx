@@ -31,13 +31,24 @@ color:"#fff"
 <Link
 to="/"
 style={{
-color:"#fff",
+color:"#ffffff",
 textDecoration:"none",
 fontWeight:700
 }}
 >
+<h2>
 🚀 Medika Nusantara
+</h2>
 </Link>
+
+<p
+style={{
+color:"#94a3b8",
+marginBottom:"25px"
+}}
+>
+Workforce Intelligence Platform
+</p>
 
 
 <h1 style={{fontSize:"38px"}}>

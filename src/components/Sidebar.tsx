@@ -176,16 +176,20 @@ display:inline-block;
 transform:translate(0,0) rotate(0deg);
 }
 
-25%{
-transform:translate(40px,-25px) rotate(90deg);
+20%{
+transform:translate(55px,-45px) rotate(72deg);
 }
 
-50%{
-transform:translate(80px,0) rotate(180deg);
+40%{
+transform:translate(120px,-5px) rotate(144deg);
 }
 
-75%{
-transform:translate(40px,25px) rotate(270deg);
+60%{
+transform:translate(55px,45px) rotate(216deg);
+}
+
+80%{
+transform:translate(-35px,10px) rotate(300deg);
 }
 
 100%{

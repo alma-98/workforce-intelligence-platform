@@ -106,42 +106,34 @@ AI Employee Intelligence Profile powered by Workforce Data Platform.
 Upload Employee Dataset
 </p>
 
+
 <div
 style={{
 display:"flex",
 flexDirection:"row",
-gap:"12px",
-alignItems:"center"
+alignItems:"center",
+gap:"12px"
 }}
 >
 
+
 <label
 style={{
-display:"inline-block",
-textAlign:"center",
-padding:"10px 18px",
+width:"220px",
+height:"42px",
+display:"flex",
+alignItems:"center",
+justifyContent:"center",
 background:"#2563eb",
 color:"#fff",
 borderRadius:"12px",
 cursor:"pointer",
 fontWeight:700,
-boxSizing:"border-box",
-transition:"all .3s ease"
-}}
-
-onMouseEnter={(e)=>{
-e.currentTarget.style.transform="translateY(-3px)";
-e.currentTarget.style.background="#1d4ed8";
-}}
-
-onMouseLeave={(e)=>{
-e.currentTarget.style.transform="translateY(0)";
-e.currentTarget.style.background="#2563eb";
+whiteSpace:"nowrap"
 }}
 >
 
 📥 Upload Employee Dataset
-
 
 <input
 type="file"
@@ -154,62 +146,28 @@ display:"none"
 
 </label>
 
-</div>
-
-
-{
-fileName &&
 
 <button
+onClick={startProcessing}
 style={{
-padding:"10px 18px",
-borderRadius:"12px",
+width:"220px",
+height:"42px",
 background:"#2563eb",
 color:"#fff",
 border:"none",
+borderRadius:"12px",
 cursor:"pointer",
 fontWeight:700,
-transition:"all .3s ease"
+whiteSpace:"nowrap"
 }}
-
-onClick={startProcessing}
 >
+
 🤖 Start AI Processing
+
 </button>
 
-}
 
-{
-processing &&
-
-<p style={{color:"#38bdf8"}}>
-🤖 AI Processing...
-
-<br/>
-✓ Reading Excel
-<br/>
-✓ Validating Employee ID
-<br/>
-✓ Detecting Missing Skill
-<br/>
-✓ Normalizing Job Title
-<br/>
-✓ Creating Employee Profile
-</p>
-
-}
-
-
-{
-completed &&
-
-<p style={{color:"#22c55e"}}>
-✓ AI Processing Completed
-<br/>
-Employee Intelligence Ready
-</p>
-
-}
+</div>
 
 
 {
@@ -217,7 +175,7 @@ fileName &&
 
 <div
 style={{
-marginTop:"15px"
+marginTop:"20px"
 }}
 >
 
@@ -226,25 +184,21 @@ Dataset:
 <b>{fileName}</b>
 </p>
 
-
 <p>
 Records:
 Waiting AI Processing
 </p>
 
-
 <p>
 Data Status:
-<span style={{color:"#facc15"}}>
 Validation Required
-</span>
 </p>
-
 
 <p>
 AI Processing:
 Pending
 </p>
+
 
 </div>
 
@@ -252,14 +206,16 @@ Pending
 
 
 {
-!fileName &&
+completed &&
 
 <p
 style={{
-color:"#94a3b8"
+color:"#22c55e"
 }}
 >
-No dataset uploaded
+✓ AI Processing Completed
+<br/>
+Employee Intelligence Ready
 </p>
 
 }
@@ -572,4 +528,3 @@ Update Employee Data
 )
 
 }
-

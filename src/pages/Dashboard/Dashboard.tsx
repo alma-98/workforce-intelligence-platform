@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const menu = [
@@ -37,15 +38,17 @@ export default function Dashboard() {
           padding: "30px 20px",
         }}
       >
-        <h2>
-          🚀 Workforce
-          <br />
-          Intelligence
-        </h2>
-
-        <p style={{color:"#94a3b8"}}>
-          Medika Nusantara
-        </p>
+        <Link
+          to="/"
+          style={{
+            color:"#ffffff",
+            textDecoration:"none",
+          }}
+        >
+          <h2>
+            🚀 Medika Nusantara
+          </h2>
+        </Link>
 
         {menu.map((item)=>(
           <div

@@ -20,6 +20,19 @@ export default function Home() {
           textAlign: "center",
         }}
       >
+        <div
+          style={{
+            color: "#2563eb",
+            fontSize: "16px",
+            fontWeight: 700,
+            letterSpacing: "2px",
+            textTransform: "uppercase",
+            marginBottom: "12px",
+          }}
+        >
+          Prototype For Medika Nusantara
+        </div>
+
         <h1
           style={{
             fontSize: "56px",

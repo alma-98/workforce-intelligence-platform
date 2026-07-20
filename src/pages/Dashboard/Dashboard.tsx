@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
-
 export default function Dashboard() {
-  const cards = [
+  const stats = [
     { title: "Employees", value: "15,230" },
     { title: "Hospitals", value: "90" },
     { title: "Skill Gap", value: "38%" },
@@ -9,138 +7,136 @@ export default function Dashboard() {
   ];
 
   return (
-    <div style={{ background: "#f8fafc", minHeight: "100vh" }}>
-      <header
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "#f8fafc",
+        padding: "40px",
+        fontFamily: "Inter, Arial, sans-serif",
+      }}
+    >
+      <h1
         style={{
-          background: "#2563eb",
-          color: "#fff",
-          padding: "20px 40px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
+          color: "#0f172a",
+          fontSize: "32px",
+          marginBottom: "8px",
         }}
       >
-        <h2>
-<a
-href="https://investment-tech-indonesia.web.app/"
-target="_blank"
-rel="noopener noreferrer"
-style={{color:"#fff",textDecoration:"none"}}
->
-Workforce Intelligence Platform Powered Investment Technology Indonesia
-</a>
-</h2>
+        Executive Dashboard
+      </h1>
 
-        <Link
-          to="/"
-          style={{
-            color: "#fff",
-            textDecoration: "none",
-            background: "#1d4ed8",
-            padding: "10px 18px",
-            borderRadius: 8,
-          }}
-        >
-          Home
-        </Link>
-      </header>
+      <p
+        style={{
+          color: "#64748b",
+          fontSize: "18px",
+          marginBottom: "35px",
+        }}
+      >
+        AI-powered workforce analytics for Medika Nusantara
+      </p>
 
-      <main style={{ padding: 40 }}>
-        <h1 style={{ marginBottom: 30 }}>
-          Executive Dashboard
-        </h1>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
-            gap: 20,
-          }}
-        >
-          {cards.map((card) => (
-            <div
-              key={card.title}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+          gap: "24px",
+        }}
+      >
+        {stats.map((item) => (
+          <div
+            key={item.title}
+            style={{
+              background: "#ffffff",
+              padding: "28px",
+              borderRadius: "18px",
+              boxShadow: "0 10px 25px rgba(0,0,0,.08)",
+            }}
+          >
+            <h2
               style={{
-                background: "#fff",
-                padding: 24,
-                borderRadius: 16,
-                boxShadow: "0 8px 24px rgba(0,0,0,.08)",
+                fontSize: "38px",
+                color: "#2563eb",
+                margin: 0,
               }}
             >
-              <h3>{card.title}</h3>
+              {item.value}
+            </h2>
 
-              <h1
-                style={{
-                  color: "#2563eb",
-                  marginTop: 10,
-                }}
-              >
-                {card.value}
-              </h1>
-            </div>
-          ))}
-        </div>
+            <p
+              style={{
+                color: "#64748b",
+                fontWeight: 600,
+              }}
+            >
+              {item.title}
+            </p>
+          </div>
+        ))}
+      </div>
 
-        <div
+      <div
+        style={{
+          marginTop: "35px",
+          background: "#ffffff",
+          padding: "30px",
+          borderRadius: "18px",
+        }}
+      >
+        <h2>🧩 Skill Gap Analysis</h2>
+
+        <p>
+          AI detected workforce capability gaps requiring strategic
+          development.
+        </p>
+
+        <ul>
+          <li>AI Literacy: 45% → Target 80%</li>
+          <li>Data Analytics: 55% → Target 85%</li>
+          <li>Leadership: 70% → Target 90%</li>
+        </ul>
+      </div>
+
+      <div
+        style={{
+          marginTop: "35px",
+          background: "#ffffff",
+          padding: "30px",
+          borderRadius: "18px",
+        }}
+      >
+        <h2>🤖 AI Recommendation Engine</h2>
+
+        <p>
+          Prioritize upskilling 320 employees in Data Analytics
+          to improve workforce readiness.
+        </p>
+
+        <strong>
+          Predicted Impact: +18% productivity
+        </strong>
+      </div>
+
+      <footer
+        style={{
+          marginTop: "70px",
+          color: "#64748b",
+          textAlign: "center",
+        }}
+      >
+        Powered by{" "}
+        <a
+          href="https://investment-tech-indonesia.web.app/"
+          target="_blank"
+          rel="noopener noreferrer"
           style={{
-            marginTop: 40,
-            background: "#fff",
-            borderRadius: 16,
-            padding: 30,
-            boxShadow: "0 8px 24px rgba(0,0,0,.08)",
+            color: "#2563eb",
+            fontWeight: 700,
+            textDecoration: "none",
           }}
         >
-          <h2>AI Workforce Summary</h2>
-
-          <p style={{ lineHeight: 1.8 }}>
-            Workforce Intelligence Platform analyzes employee skills,
-            predicts workforce readiness, identifies skill gaps,
-            and recommends AI-driven development plans for HR leaders.
-          </p>
-        </div>
-
-        <div
-          style={{
-            marginTop: 30,
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit,minmax(300px,1fr))",
-            gap: 20,
-          }}
-        >
-          <div
-            style={{
-              background: "#fff",
-              padding: 24,
-              borderRadius: 16,
-              boxShadow: "0 8px 24px rgba(0,0,0,.08)",
-            }}
-          >
-            <h3>Skill Gap</h3>
-            <p>Clinical : 41%</p>
-            <p>IT : 27%</p>
-            <p>HR : 18%</p>
-            <p>Finance : 14%</p>
-          </div>
-
-          <div
-            style={{
-              background: "#fff",
-              padding: 24,
-              borderRadius: 16,
-              boxShadow: "0 8px 24px rgba(0,0,0,.08)",
-            }}
-          >
-            <h3>Recent Activities</h3>
-
-            <ul>
-              <li>✓ AI Recommendation Generated</li>
-              <li>✓ Employee Skill Updated</li>
-              <li>✓ Dataset Imported</li>
-              <li>✓ Human Review Completed</li>
-            </ul>
-          </div>
-        </div>
-      </main>
+          Investment Technology Indonesia
+        </a>
+      </footer>
     </div>
   );
 }

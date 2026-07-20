@@ -20,16 +20,7 @@ export default function Dashboard() {
           alignItems: "center",
         }}
       >
-        <h2>
-<a
-href="https://investment-tech-indonesia.web.app/"
-target="_blank"
-rel="noopener noreferrer"
-style={{color:"#fff",textDecoration:"none"}}
->
-Workforce Intelligence Platform Powered Investment Technology Indonesia
-</a>
-</h2>
+        <h2>Workforce Intelligence Platform</h2>
 
         <Link
           to="/"

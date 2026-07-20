@@ -183,6 +183,22 @@ Launch AI Healthcare Upskilling Program
 for 320 employees.
 </p>
 
+<Link
+to="/ai-hiring"
+style={{
+display:"inline-block",
+marginTop:"20px",
+padding:"12px 24px",
+background:"#2563eb",
+color:"#ffffff",
+borderRadius:"12px",
+textDecoration:"none",
+fontWeight:700
+}}
+>
+🚀 AI Hiring
+</Link>
+
 
 </section>
 

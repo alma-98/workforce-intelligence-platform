@@ -218,8 +218,9 @@ export default function Dashboard() {
           <a
             href="https://investment-tech-indonesia.web.app/"
             style={{
-              color:"#ffffff",
+              color:"#2563eb",
               fontWeight:700,
+              textDecoration:"none",
             }}
           >
             Investment Technology Indonesia

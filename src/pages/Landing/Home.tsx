@@ -22,7 +22,7 @@ export default function Home() {
       >
         <div
           style={{
-            color: "#2563eb",
+            color: "#ffffff",
             fontSize: "16px",
             fontWeight: 700,
             letterSpacing: "2px",
@@ -30,7 +30,7 @@ export default function Home() {
             marginBottom: "12px",
           }}
         >
-          Prototype For Medika Nusantara
+          🚀 Prototype For Medika Nusantara
         </div>
 
         <h1

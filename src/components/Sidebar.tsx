@@ -26,18 +26,46 @@ color:"#fff"
 }}
 >
 
+
 <Link
 to="/"
 style={{
-color:"#38bdf8",
+color:"#ffffff",
 textDecoration:"none",
-fontWeight:800
+display:"inline-block",
+fontWeight:800,
+transition:"all .3s ease"
+}}
+onMouseEnter={(e)=>{
+e.currentTarget.style.color="#38bdf8";
+e.currentTarget.style.transform="translateY(-5px) scale(1.1)";
+e.currentTarget.style.textShadow="0 0 20px #38bdf8";
+}}
+onMouseLeave={(e)=>{
+e.currentTarget.style.color="#ffffff";
+e.currentTarget.style.transform="translateY(0) scale(1)";
+e.currentTarget.style.textShadow="none";
 }}
 >
 <h2>
-🚀 Medika Nusantara
+<span
+style={{
+display:"inline-block",
+transition:"transform .6s ease"
+}}
+onMouseEnter={(e)=>{
+e.currentTarget.style.transform="rotate(360deg)";
+}}
+onMouseLeave={(e)=>{
+e.currentTarget.style.transform="rotate(0deg)";
+}}
+>
+🚀
+</span>
+ Medika Nusantara
 </h2>
 </Link>
+
 
 <p
 style={{

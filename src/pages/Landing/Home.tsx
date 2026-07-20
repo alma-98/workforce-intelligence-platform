@@ -5,24 +5,26 @@ export default function Home() {
     <div
       style={{
         minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
         background: "#f8fafc",
-        fontFamily: "Inter, sans-serif",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        padding: "40px",
+        fontFamily: "Inter, Arial, sans-serif",
       }}
     >
       <div
         style={{
-          maxWidth: 900,
+          maxWidth: "1100px",
+          width: "100%",
           textAlign: "center",
-          padding: 40,
         }}
       >
         <p
           style={{
             color: "#2563eb",
-            fontWeight: 600,
+            fontWeight: 700,
+            letterSpacing: 1,
             marginBottom: 12,
           }}
         >
@@ -31,9 +33,11 @@ export default function Home() {
 
         <h1
           style={{
-            fontSize: "56px",
+            fontSize: "60px",
             fontWeight: 800,
-            marginBottom: 16,
+            color: "#0f172a",
+            marginBottom: 20,
+            lineHeight: 1.15,
           }}
         >
           Workforce Intelligence Platform
@@ -41,63 +45,101 @@ export default function Home() {
 
         <p
           style={{
+            fontSize: "22px",
             color: "#64748b",
-            fontSize: "20px",
-            lineHeight: 1.7,
-            marginBottom: 16,
+            maxWidth: "760px",
+            margin: "0 auto 45px",
+            lineHeight: 1.8,
           }}
         >
-          Powered by investment-tech-indonesia.web.app
+          AI-powered Workforce Intelligence Platform that helps HR leaders
+          analyze workforce readiness, identify skill gaps, and generate
+          intelligent recommendations for strategic workforce planning.
         </p>
 
-        <p
+        <Link
+          to="/dashboard"
           style={{
-            color: "#475569",
+            display: "inline-block",
+            background: "#2563eb",
+            color: "#fff",
+            padding: "16px 36px",
+            borderRadius: "12px",
+            textDecoration: "none",
+            fontWeight: 700,
             fontSize: "18px",
-            lineHeight: 1.8,
-            marginBottom: 40,
+            marginBottom: "60px",
           }}
         >
-          AI-powered workforce decision platform designed to help HR leaders
-          transform fragmented workforce data into trusted business decisions.
-        </p>
+          🚀 Launch Platform
+        </Link>
 
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 20,
-            flexWrap: "wrap",
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))",
+            gap: "24px",
           }}
         >
-          <Link
-            to="/dashboard"
-            style={{
-              background: "#2563eb",
-              color: "#fff",
-              padding: "14px 28px",
-              borderRadius: 10,
-              textDecoration: "none",
-              fontWeight: 600,
-            }}
-          >
-            Launch Demo
-          </Link>
+          {[
+            { value: "15,230", label: "Employees" },
+            { value: "90", label: "Hospitals" },
+            { value: "38%", label: "Skill Gap" },
+            { value: "96.2%", label: "AI Accuracy" },
+          ].map((item) => (
+            <div
+              key={item.label}
+              style={{
+                background: "#fff",
+                padding: "30px",
+                borderRadius: "18px",
+                boxShadow: "0 10px 25px rgba(0,0,0,.08)",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "42px",
+                  color: "#2563eb",
+                  margin: 0,
+                }}
+              >
+                {item.value}
+              </h2>
 
-          <Link
-            to="/about"
+              <p
+                style={{
+                  marginTop: "12px",
+                  color: "#64748b",
+                  fontWeight: 600,
+                }}
+              >
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <footer
+          style={{
+            marginTop: "70px",
+            color: "#64748b",
+            fontSize: "15px",
+          }}
+        >
+          Powered by{" "}
+          <a
+            href="https://investment-tech-indonesia.web.app"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              border: "2px solid #2563eb",
               color: "#2563eb",
-              padding: "14px 28px",
-              borderRadius: 10,
+              fontWeight: 700,
               textDecoration: "none",
-              fontWeight: 600,
             }}
           >
-            View Case Study
-          </Link>
-        </div>
+            Investment Technology Indonesia
+          </a>
+        </footer>
       </div>
     </div>
   );

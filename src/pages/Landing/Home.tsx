@@ -144,7 +144,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              color: "#2563eb",
+              color: "#ffffff",
               fontWeight: 700,
               textDecoration: "none",
             }}

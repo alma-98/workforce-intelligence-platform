@@ -34,17 +34,21 @@ color:"#ffffff",
 textDecoration:"none",
 display:"inline-block",
 fontWeight:800,
+padding:"8px 12px",
+borderRadius:"12px",
 transition:"all .3s ease"
 }}
 onMouseEnter={(e)=>{
-e.currentTarget.style.color="#38bdf8";
-e.currentTarget.style.transform="translateY(-5px) scale(1.1)";
-e.currentTarget.style.textShadow="0 0 20px #38bdf8";
+e.currentTarget.style.color="#ffffff";
+e.currentTarget.style.background="#2563eb";
+e.currentTarget.style.transform="translateY(-5px) scale(1.05)";
+
 }}
 onMouseLeave={(e)=>{
 e.currentTarget.style.color="#ffffff";
+e.currentTarget.style.background="transparent";
 e.currentTarget.style.transform="translateY(0) scale(1)";
-e.currentTarget.style.textShadow="none";
+
 }}
 >
 <h2>

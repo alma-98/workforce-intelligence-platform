@@ -17,10 +17,12 @@ fontFamily:"Inter,Arial"
 to="/dashboard"
 style={{
 color:"#38bdf8",
-textDecoration:"none"
+textDecoration:"none",
+fontWeight:700,
+fontSize:"18px"
 }}
 >
-← Back Dashboard
+🚀 Dashboard
 </Link>
 
 <h1>

@@ -430,16 +430,6 @@ Create AI Healthcare Academy.
 </p>
 
 
-<Link
-to="/employee-360"
-style={{
-color:"#38bdf8",
-fontWeight:700
-}}
->
-View Employee 360 →
-</Link>
-
 
 </section>
 

@@ -29,6 +29,7 @@ color:"#fff"
 
 <Link
 to="/"
+className="brand-link"
 style={{
 color:"#ffffff",
 textDecoration:"none",
@@ -52,9 +53,7 @@ e.currentTarget.style.transform="translateY(0) scale(1)";
 }}
 >
 <h2>
-<span
-className="rocket-logo"
->
+<span className="rocket-logo">
 🚀
 </span>
  Medika Nusantara
@@ -105,6 +104,59 @@ e.currentTarget.style.transform="translateX(0)";
 }
 
 
+
+<style>
+{`
+.brand-link{
+position:relative;
+display:inline-block;
+padding:8px 12px;
+border-radius:12px;
+color:white;
+text-decoration:none;
+font-weight:800;
+transition:.3s;
+}
+
+.brand-link:hover{
+background:#2563eb;
+transform:translateY(-5px) scale(1.05);
+}
+
+.rocket-logo{
+display:inline-block;
+transition:.3s;
+}
+
+.brand-link:hover .rocket-logo{
+animation:rocketOrbit 1.2s ease-in-out;
+}
+
+@keyframes rocketOrbit{
+
+0%{
+transform:translate(0,0) rotate(0deg);
+}
+
+25%{
+transform:translate(25px,-18px) rotate(90deg);
+}
+
+50%{
+transform:translate(55px,0) rotate(180deg);
+}
+
+75%{
+transform:translate(25px,18px) rotate(270deg);
+}
+
+100%{
+transform:translate(0,0) rotate(360deg);
+}
+
+}
+`}
+</style>
 </aside>
 
 )

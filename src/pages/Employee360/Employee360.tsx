@@ -106,15 +106,27 @@ AI Employee Intelligence Profile powered by Workforce Data Platform.
 Upload Employee Dataset
 </p>
 
+<div
+style={{
+display:"flex",
+flexDirection:"column",
+gap:"15px",
+width:"100%"
+}}
+>
+
 <label
 style={{
-display:"inline-block",
-padding:"12px 22px",
+display:"block",
+width:"100%",
+textAlign:"center",
+padding:"14px 22px",
 background:"#2563eb",
 color:"#fff",
 borderRadius:"12px",
 cursor:"pointer",
 fontWeight:700,
+boxSizing:"border-box",
 transition:"all .3s ease"
 }}
 
@@ -143,20 +155,23 @@ display:"none"
 
 </label>
 
+</div>
+
 
 {
 fileName &&
 
 <button
 style={{
-marginTop:"20px",
-padding:"12px 22px",
+width:"100%",
+padding:"14px 22px",
 borderRadius:"12px",
 background:"#2563eb",
 color:"#fff",
 border:"none",
 cursor:"pointer",
-fontWeight:700
+fontWeight:700,
+transition:"all .3s ease"
 }}
 
 onClick={startProcessing}

@@ -105,44 +105,31 @@ e.currentTarget.style.transform="translateX(0)";
 
 
 
+
 <style>
 {`
 .brand-link{
 position:relative;
 display:inline-block;
 padding:8px 12px;
-border-radius:12px;
 color:white;
 text-decoration:none;
 font-weight:800;
-transition:.3s;
+transition:all .35s ease;
 }
 
 .brand-link:hover{
-background:"transparent";
-transform:translateY(-4px) scale(1.05);
+transform:translateY(-5px) scale(1.05);
 }
 
 .rocket-logo{
 display:inline-block;
-transition:.3s;
-}
-
-.brand-link:hover .rocket-logo{
-animation:rocketOrbit 1.2s ease-in-out;
-}
-
-
-
-.rocket-logo{
-display:inline-block;
-position:relative;
-transition:.3s;
 }
 
 .brand-link:hover .rocket-logo{
 animation:rocketCircle 2s ease-in-out;
 }
+
 
 @keyframes rocketCircle{
 
@@ -155,7 +142,7 @@ transform:translate(35px,-25px) rotate(90deg);
 }
 
 40%{
-transform:translate(80px,0) rotate(180deg);
+transform:translate(75px,0) rotate(180deg);
 }
 
 60%{
@@ -171,14 +158,9 @@ transform:translate(0,0) rotate(360deg);
 }
 
 }
-
-
-}
-
-
-}
 `}
 </style>
+
 </aside>
 
 )

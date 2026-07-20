@@ -73,6 +73,22 @@ export default function Dashboard() {
         }}
       >
 
+        <Link
+          to="/"
+          style={{
+            display:"inline-block",
+            marginBottom:"20px",
+            padding:"10px 18px",
+            borderRadius:"10px",
+            background:"#2563eb",
+            color:"#fff",
+            textDecoration:"none",
+            fontWeight:700,
+          }}
+        >
+          ← Back to Landing Page
+        </Link>
+
         <h1
           style={{
             fontSize:"32px",

@@ -90,11 +90,42 @@ AI Employee Intelligence Profile powered by Workforce Data Platform.
 Upload Employee Dataset
 </p>
 
+<label
+style={{
+display:"inline-block",
+padding:"12px 22px",
+background:"#2563eb",
+color:"#fff",
+borderRadius:"12px",
+cursor:"pointer",
+fontWeight:700,
+transition:"all .3s ease"
+}}
+
+onMouseEnter={(e)=>{
+e.currentTarget.style.transform="translateY(-3px)";
+e.currentTarget.style.background="#1d4ed8";
+}}
+
+onMouseLeave={(e)=>{
+e.currentTarget.style.transform="translateY(0)";
+e.currentTarget.style.background="#2563eb";
+}}
+>
+
+📥 Upload Employee Dataset
+
+
 <input
 type="file"
 accept=".xlsx,.csv"
 onChange={handleUpload}
+style={{
+display:"none"
+}}
 />
+
+</label>
 
 
 {

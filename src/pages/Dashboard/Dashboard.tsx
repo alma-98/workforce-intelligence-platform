@@ -1,130 +1,361 @@
+import { Link } from "react-router-dom";
 
 export default function Dashboard() {
-  return (
-    <main className="p-6 bg-slate-50 min-h-screen">
+  const menu = [
+    "📊 Executive Dashboard",
+    "👤 Employee 360",
+    "🧩 Skill Gap Analysis",
+    "🤖 AI Recommendation",
+    "👥 Human Review",
+    "📂 Dataset Comparison",
+    "⚙ Data Pipeline",
+    "🎯 Platform Strategy",
+    "ℹ About",
+  ];
 
-      <div className="mb-8">
-        <h1 className="text-4xl font-bold">
+  const metrics = [
+    {
+      value: "15,230",
+      label: "Employees",
+      icon: "👥",
+    },
+    {
+      value: "90",
+      label: "Hospitals",
+      icon: "🏥",
+    },
+    {
+      value: "38%",
+      label: "Skill Gap",
+      icon: "🧩",
+    },
+    {
+      value: "96.2%",
+      label: "AI Accuracy",
+      icon: "🤖",
+    },
+  ];
+
+  const skills = [
+    ["AI Literacy", "45%"],
+    ["Data Analytics", "55%"],
+    ["Leadership", "70%"],
+  ];
+
+  return (
+    <div
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+        background: "#020617",
+        color: "#ffffff",
+        fontFamily: "Inter, Arial, sans-serif",
+      }}
+    >
+
+      {/* SIDEBAR */}
+      <aside
+        style={{
+          width: "260px",
+          background: "#0f172a",
+          padding: "30px 20px",
+        }}
+      >
+        <Link
+          to="/"
+          style={{
+            color: "#ffffff",
+            textDecoration: "none",
+          }}
+        >
+          <h2>
+            🚀 Medika Nusantara
+          </h2>
+        </Link>
+
+        <p
+          style={{
+            color: "#94a3b8",
+            marginBottom: "30px",
+          }}
+        >
+          Workforce Intelligence Platform
+        </p>
+
+        {menu.map((item, index) => (
+          <div
+            key={item}
+            style={{
+              padding: "14px",
+              marginBottom: "8px",
+              borderRadius: "12px",
+              background:
+                index === 0
+                  ? "#2563eb"
+                  : "transparent",
+              cursor: "pointer",
+            }}
+          >
+            {item}
+          </div>
+        ))}
+
+      </aside>
+
+
+      {/* MAIN DASHBOARD */}
+      <main
+        style={{
+          flex: 1,
+          padding: "40px",
+          background:
+            "linear-gradient(135deg,#020617,#1e3a8a)",
+        }}
+      >
+
+        <h1
+          style={{
+            fontSize: "38px",
+            marginBottom: "10px",
+          }}
+        >
           Executive Dashboard
         </h1>
-        <p className="text-slate-500 mt-2">
-          Workforce Intelligence Overview
+
+        <p
+          style={{
+            color:"#94a3b8",
+            fontSize:"18px",
+          }}
+        >
+          AI-powered workforce analytics & strategic planning
         </p>
-      </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
 
-        <div className="rounded-xl bg-white p-6 shadow">
-          <p>Total Employees</p>
-          <h2 className="text-3xl font-bold mt-2">15,247</h2>
+        {/* KPI */}
+        <div
+          style={{
+            display:"grid",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(220px,1fr))",
+            gap:"20px",
+            marginTop:"35px",
+          }}
+        >
+
+        {metrics.map((item)=>(
+
+          <div
+            key={item.label}
+            style={{
+              background:"rgba(255,255,255,.08)",
+              border:
+                "1px solid rgba(255,255,255,.15)",
+              padding:"25px",
+              borderRadius:"20px",
+              backdropFilter:"blur(15px)",
+            }}
+          >
+
+            <div style={{fontSize:"30px"}}>
+              {item.icon}
+            </div>
+
+            <h2
+              style={{
+                fontSize:"40px",
+                margin:"10px 0",
+              }}
+            >
+              {item.value}
+            </h2>
+
+            <p style={{color:"#94a3b8"}}>
+              {item.label}
+            </p>
+
+          </div>
+
+        ))}
+
         </div>
 
-        <div className="rounded-xl bg-white p-6 shadow">
-          <p>Workforce Health</p>
-          <h2 className="text-3xl font-bold mt-2">82%</h2>
+
+        {/* AI SECTION */}
+
+        <div
+          style={{
+            display:"grid",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(350px,1fr))",
+            gap:"25px",
+            marginTop:"30px",
+          }}
+        >
+
+          <section
+            style={{
+              background:"rgba(255,255,255,.08)",
+              padding:"30px",
+              borderRadius:"25px",
+            }}
+          >
+
+            <h2>
+              🧠 Workforce Intelligence Score
+            </h2>
+
+            <h1
+              style={{
+                fontSize:"70px",
+                color:"#22c55e",
+              }}
+            >
+              82%
+            </h1>
+
+            <p>
+              Future workforce readiness index
+            </p>
+
+          </section>
+
+
+          <section
+            style={{
+              background:"rgba(255,255,255,.08)",
+              padding:"30px",
+              borderRadius:"25px",
+            }}
+          >
+
+            <h2>
+              🤖 AI Prediction Engine
+            </h2>
+
+            <p>
+              Next 12 Months Forecast
+            </p>
+
+            <h3>
+              🚀 +18% Productivity
+            </h3>
+
+            <h3>
+              📈 +25% Skill Coverage
+            </h3>
+
+            <h3>
+              ⚠ -30% Capability Risk
+            </h3>
+
+          </section>
+
         </div>
 
-        <div className="rounded-xl bg-white p-6 shadow">
-          <p>AI Confidence</p>
-          <h2 className="text-3xl font-bold mt-2">89%</h2>
-        </div>
 
-        <div className="rounded-xl bg-white p-6 shadow">
-          <p>Data Quality</p>
-          <h2 className="text-3xl font-bold mt-2">92%</h2>
-        </div>
+        {/* SKILL GAP */}
 
-      </section>
+        <section
+          style={{
+            marginTop:"30px",
+            background:"rgba(255,255,255,.08)",
+            padding:"30px",
+            borderRadius:"25px",
+          }}
+        >
 
-      <section className="grid xl:grid-cols-2 gap-6 mb-8">
-
-        <div className="bg-white rounded-xl shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">
-            Executive AI Insight
+          <h2>
+            🧩 Skill Gap Analytics
           </h2>
 
-          <ul className="space-y-3">
-            <li>• 132 Employees Need Reskilling</li>
-            <li>• 27 Promotion Candidates</li>
-            <li>• 18 Critical Hiring</li>
-            <li>• AI Confidence 89%</li>
-          </ul>
 
-        </div>
+          {skills.map(skill=>(
 
-        <div className="bg-white rounded-xl shadow p-6">
-          <h2 className="text-xl font-semibold mb-4">
-            High Priority Alerts
+            <div key={skill[0]}>
+
+              <p>
+                {skill[0]} — {skill[1]}
+              </p>
+
+              <div
+                style={{
+                  height:"12px",
+                  background:"#1e293b",
+                  borderRadius:"20px",
+                }}
+              >
+
+                <div
+                  style={{
+                    width:skill[1],
+                    height:"12px",
+                    background:"#38bdf8",
+                    borderRadius:"20px",
+                  }}
+                />
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </section>
+
+
+        <section
+          style={{
+            marginTop:"30px",
+            background:"rgba(239,68,68,.15)",
+            padding:"30px",
+            borderRadius:"25px",
+          }}
+        >
+
+          <h2>
+            ⚠ Workforce Risk Detection
           </h2>
 
-          <ul className="space-y-3">
-            <li>🔴 124 Attrition Risk</li>
-            <li>🟠 42 Skill Gap</li>
-            <li>🟡 38 Human Review Queue</li>
-            <li>🟢 Data Quality Improved</li>
-          </ul>
+          <p>
+            320 employees require strategic upskilling intervention.
+          </p>
 
-        </div>
+          <strong>
+            Recommendation:
+            AI & Data Academy Program
+          </strong>
 
-      </section>
+        </section>
 
-      <section className="grid xl:grid-cols-2 gap-6 mb-8">
 
-        <div className="bg-white rounded-xl shadow h-72 p-6">
-          <h2 className="font-semibold">
-            Workforce Health Trend
-          </h2>
-        </div>
+        <footer
+          style={{
+            marginTop:"60px",
+            textAlign:"center",
+            color:"#94a3b8",
+          }}
+        >
+          Powered by{" "}
 
-        <div className="bg-white rounded-xl shadow h-72 p-6">
-          <h2 className="font-semibold">
-            Attrition Risk by Branch
-          </h2>
-        </div>
+          <a
+            href="https://investment-tech-indonesia.web.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color:"#38bdf8",
+              fontWeight:700,
+              textDecoration:"none",
+            }}
+          >
+            Investment Technology Indonesia
+          </a>
 
-        <div className="bg-white rounded-xl shadow h-72 p-6">
-          <h2 className="font-semibold">
-            Skill Gap Analysis
-          </h2>
-        </div>
+        </footer>
 
-        <div className="bg-white rounded-xl shadow h-72 p-6">
-          <h2 className="font-semibold">
-            Hiring Pipeline
-          </h2>
-        </div>
 
-      </section>
+      </main>
 
-      <section className="bg-white rounded-xl shadow p-6 mb-8">
-        <h2 className="text-xl font-semibold mb-4">
-          Recommended Actions
-        </h2>
-
-        <ul className="space-y-2">
-          <li>Review AI Recommendation</li>
-          <li>Launch Reskilling Program</li>
-          <li>Open Human Review</li>
-          <li>Download Executive Report</li>
-        </ul>
-
-      </section>
-
-      <section className="bg-white rounded-xl shadow p-6">
-
-        <h2 className="text-xl font-semibold mb-4">
-          Recent Activity
-        </h2>
-
-        <ul className="space-y-2">
-          <li>AI Model Updated</li>
-          <li>Data Sync Completed</li>
-          <li>Dataset Improved</li>
-          <li>18 Employees Added</li>
-        </ul>
-
-      </section>
-
-    </main>
+    </div>
   );
 }

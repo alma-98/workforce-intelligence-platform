@@ -1,11 +1,11 @@
 export const menu = [
-  { name: "Dashboard", path: "/dashboard", icon: "📊" },
-  { name: "Employee 360", path: "/employee", icon: "👥" },
-  { name: "Skill Gap", path: "/skill-gap", icon: "🎯" },
-  { name: "AI Recommendation", path: "/recommendation", icon: "🤖" },
-  { name: "Human Review", path: "/review", icon: "🧑‍💼" },
-  { name: "Dataset Comparison", path: "/comparison", icon: "📈" },
-  { name: "Data Pipeline", path: "/pipeline", icon: "🔄" },
-  { name: "Platform Strategy", path: "/strategy", icon: "🚀" },
-  { name: "About", path: "/about", icon: "ℹ️" }
+  { title: "Dashboard", path: "/dashboard", icon: "📊" },
+  { title: "Employee 360", path: "/employee", icon: "👥" },
+  { title: "Skill Gap", path: "/skill-gap", icon: "🎯" },
+  { title: "AI Recommendation", path: "/recommendation", icon: "🤖" },
+  { title: "Human Review", path: "/review", icon: "🧑‍💼" },
+  { title: "Dataset Comparison", path: "/comparison", icon: "📈" },
+  { title: "Data Pipeline", path: "/pipeline", icon: "🔄" },
+  { title: "Platform Strategy", path: "/strategy", icon: "🚀" },
+  { title: "About", path: "/about", icon: "ℹ️" }
 ];

@@ -68,30 +68,49 @@ Workforce Intelligence Platform
 
 {
 [
-"📊 Executive Dashboard",
-"👤 Employee 360",
-"🧩 Skill Gap Analysis",
-"🤖 AI Recommendation",
-"🚀 AI Hiring",
-"👥 Human Review",
-"📂 Dataset Comparison",
-"⚙ Data Pipeline"
+{label:"📊 Executive Dashboard", path:"/dashboard"},
+{label:"👤 Employee 360", path:"/employee-360"},
+{label:"🧩 Skill Gap Analysis", path:"/skill-gap"},
+{label:"🤖 AI Recommendation", path:"/ai-recommendation"},
+{label:"🚀 AI Hiring", path:"/ai-hiring"},
+{label:"👥 Human Review", path:"/human-review"},
+{label:"📂 Dataset Comparison", path:"/dataset-comparison"},
+{label:"⚙ Data Pipeline", path:"/data-pipeline"},
+{label:"🎯 Platform Strategy", path:"/platform-strategy"},
+{label:"ℹ About", path:"/about"}
 ].map(item=>(
 
-<div
-key={item}
+<Link
+key={item.label}
+to={item.path}
 style={{
+display:"block",
 padding:"14px",
 marginTop:"8px",
 borderRadius:"12px",
+color:"#fff",
+textDecoration:"none",
 background:
-item==="👤 Employee 360"
+item.path==="/employee-360"
+?"#2563eb"
+:"transparent",
+transition:"0.3s"
+}}
+
+onMouseEnter={(e)=>
+e.currentTarget.style.background="#1e40af"
+}
+
+onMouseLeave={(e)=>
+e.currentTarget.style.background=
+item.path==="/employee-360"
 ?"#2563eb"
 :"transparent"
-}}
+}
+
 >
-{item}
-</div>
+{item.label}
+</Link>
 
 ))
 }

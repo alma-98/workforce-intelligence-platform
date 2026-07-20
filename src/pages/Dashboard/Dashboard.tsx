@@ -218,7 +218,7 @@ export default function Dashboard() {
           <a
             href="https://investment-tech-indonesia.web.app/"
             style={{
-              color:"#2563eb",
+              color:"#ffffff",
               fontWeight:700,
             }}
           >

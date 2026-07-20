@@ -109,18 +109,17 @@ Upload Employee Dataset
 <div
 style={{
 display:"flex",
-flexDirection:"column",
-gap:"15px",
-width:"100%"
+flexDirection:"row",
+gap:"12px",
+alignItems:"center"
 }}
 >
 
 <label
 style={{
-display:"block",
-width:"100%",
+display:"inline-block",
 textAlign:"center",
-padding:"14px 22px",
+padding:"10px 18px",
 background:"#2563eb",
 color:"#fff",
 borderRadius:"12px",
@@ -163,8 +162,7 @@ fileName &&
 
 <button
 style={{
-width:"100%",
-padding:"14px 22px",
+padding:"10px 18px",
 borderRadius:"12px",
 background:"#2563eb",
 color:"#fff",

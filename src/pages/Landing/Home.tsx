@@ -23,7 +23,7 @@ export default function Home() {
         <div
           style={{
             color: "#ffffff",
-            fontSize: "16px",
+            fontSize: "24px",
             fontWeight: 700,
             letterSpacing: "2px",
             textTransform: "uppercase",

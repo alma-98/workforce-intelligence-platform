@@ -41,13 +41,11 @@ transition:"all .3s ease"
 }}
 onMouseEnter={(e)=>{
 e.currentTarget.style.color="#ffffff";
-e.currentTarget.style.background="#2563eb";
 e.currentTarget.style.transform="translateY(-5px) scale(1.05)";
 
 }}
 onMouseLeave={(e)=>{
 e.currentTarget.style.color="#ffffff";
-e.currentTarget.style.background="transparent";
 e.currentTarget.style.transform="translateY(0) scale(1)";
 
 }}
@@ -161,6 +159,42 @@ transform:translate(0,0) rotate(360deg);
 `}
 </style>
 
+
+<style>
+{`
+.brand-link:hover .rocket-logo{
+animation:rocketOrbit 2s ease-in-out;
+}
+
+.rocket-logo{
+display:inline-block;
+}
+
+@keyframes rocketOrbit{
+
+0%{
+transform:translate(0,0) rotate(0deg);
+}
+
+25%{
+transform:translate(40px,-25px) rotate(90deg);
+}
+
+50%{
+transform:translate(80px,0) rotate(180deg);
+}
+
+75%{
+transform:translate(40px,25px) rotate(270deg);
+}
+
+100%{
+transform:translate(0,0) rotate(360deg);
+}
+
+}
+`}
+</style>
 </aside>
 
 )

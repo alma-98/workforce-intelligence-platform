@@ -119,8 +119,8 @@ transition:.3s;
 }
 
 .brand-link:hover{
-background:#2563eb;
-transform:translateY(-5px) scale(1.05);
+background:"transparent";
+transform:translateY(-4px) scale(1.05);
 }
 
 .rocket-logo{
@@ -132,27 +132,35 @@ transition:.3s;
 animation:rocketOrbit 1.2s ease-in-out;
 }
 
+
 @keyframes rocketOrbit{
 
 0%{
 transform:translate(0,0) rotate(0deg);
 }
 
-25%{
-transform:translate(25px,-18px) rotate(90deg);
+20%{
+transform:translate(35px,-25px) rotate(72deg);
 }
 
-50%{
-transform:translate(55px,0) rotate(180deg);
+40%{
+transform:translate(80px,0) rotate(144deg);
 }
 
-75%{
-transform:translate(25px,18px) rotate(270deg);
+60%{
+transform:translate(35px,25px) rotate(216deg);
+}
+
+80%{
+transform:translate(-20px,0) rotate(288deg);
 }
 
 100%{
 transform:translate(0,0) rotate(360deg);
 }
+
+}
+
 
 }
 `}

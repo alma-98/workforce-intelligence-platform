@@ -26,9 +26,18 @@ color:"#fff"
 }}
 >
 
+<Link
+to="/"
+style={{
+color:"#38bdf8",
+textDecoration:"none",
+fontWeight:800
+}}
+>
 <h2>
 🚀 Medika Nusantara
 </h2>
+</Link>
 
 <p
 style={{

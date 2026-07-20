@@ -15,7 +15,7 @@ export default function App() {
         </h1>
 
         <h2>
-          Powered by Investment Technology Indonesia
+          Powered by investment-tech-indonesia.web.app
         </h2>
 
         <p>
@@ -55,7 +55,7 @@ export default function App() {
       </section>
 
       <footer>
-        © 2026 Investment Technology Indonesia
+        © 2026 investment-tech-indonesia.web.app
       </footer>
 
     </div>

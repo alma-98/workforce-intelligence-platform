@@ -5,7 +5,7 @@ export default function Home() {
     <div
       style={{
         minHeight: "100vh",
-        background: "#f8fafc",
+        background: "linear-gradient(135deg,#0f172a,#1e3a8a)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -20,46 +20,32 @@ export default function Home() {
           textAlign: "center",
         }}
       >
-        <p
-          style={{
-            color: "#2563eb",
-            fontWeight: 700,
-            letterSpacing: 1,
-            marginBottom: 12,
-          }}
-        >
-          Prototype for Medika Nusantara
-        </p>
-
         <h1
           style={{
-            fontSize: "60px",
+            fontSize: "56px",
             fontWeight: 800,
-            color: "#0f172a",
-            marginBottom: 20,
-            lineHeight: 1.15,
+            color: "#ffffff",
+            marginBottom: "24px",
+            lineHeight: 1.2,
           }}
         >
-          <a href="https://investment-tech-indonesia.web.app/" target="_blank" rel="noopener noreferrer" style={{color:"#fff",textDecoration:"none"}}><a href="https://investment-tech-indonesia.web.app/" target="_blank" rel="noopener noreferrer" style={{color:"#fff",textDecoration:"none"}}><a href="https://investment-tech-indonesia.web.app/" target="_blank" rel="noopener noreferrer" style={{color:"#fff",textDecoration:"none"}}>Workforce Intelligence Platform Powered Investment Technology Indonesia</a> Powered Investment Technology Indonesia</a> Powered Investment Technology Indonesia</a>
+          <a
+            href="https://investment-tech-indonesia.web.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              color: "#ffffff",
+              textDecoration: "none",
+            }}
+          >
+            Workforce Intelligence Platform Powered Investment Technology Indonesia
+          </a>
         </h1>
 
         <p
           style={{
             fontSize: "22px",
-<a
-  href="https://investment-tech-indonesia.web.app/"
-  target="_blank"
-  rel="noopener noreferrer"
-  style={{
-    textDecoration: "none",
-    color: "#0f172a",
-    fontWeight: 700,
-  }}
->
-  Workforce Intelligence Platform - Powered Investment Technology 
-Indonesia
-</a>            color: 
-"#64748b",
+            color: "#64748b",
             maxWidth: "760px",
             margin: "0 auto 45px",
             lineHeight: 1.8,

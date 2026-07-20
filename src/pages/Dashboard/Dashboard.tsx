@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Sidebar from "../../components/Sidebar";
 
 export default function Dashboard() {
 
@@ -58,72 +58,7 @@ fontFamily:"Inter, Arial"
 
 {/* SIDEBAR */}
 
-<aside
-style={{
-width:"260px",
-background:"#0f172a",
-color:"#fff",
-padding:"30px 20px"
-}}
->
-
-<Link
-to="/"
-style={{
-color:"#fff",
-textDecoration:"none"
-}}
->
-
-<h2>
-🚀 Medika Nusantara
-</h2>
-
-</Link>
-
-
-<p
-style={{
-color:"#94a3b8"
-}}
->
-Workforce Intelligence Platform
-</p>
-
-
-{
-[
-"📊 Executive Dashboard",
-"👤 Employee 360",
-"🧩 Skill Gap Analysis",
-"🤖 AI Recommendation",
-"🚀 AI Hiring",
-"👥 Human Review",
-"📂 Dataset Comparison",
-"⚙ Data Pipeline",
-"🎯 Platform Strategy",
-"ℹ About"
-].map((item,index)=>(
-
-<div
-key={item}
-style={{
-padding:"14px",
-marginTop:"8px",
-borderRadius:"12px",
-background:index===0
-?"#2563eb"
-:"transparent"
-}}
->
-{item}
-</div>
-
-))
-}
-
-
-</aside>
+<Sidebar />
 
 
 

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Sidebar from "../../components/Sidebar";
 
 export default function Employee360() {
 
@@ -36,87 +36,7 @@ fontFamily:"Inter, Arial"
 
 {/* SIDEBAR */}
 
-<aside
-style={{
-width:"260px",
-background:"#0f172a",
-padding:"30px 20px"
-}}
->
-
-<Link
-to="/"
-style={{
-color:"#fff",
-textDecoration:"none"
-}}
->
-<h2>
-🚀 Medika Nusantara
-</h2>
-</Link>
-
-
-<p
-style={{
-color:"#94a3b8"
-}}
->
-Workforce Intelligence Platform
-</p>
-
-
-{
-[
-{label:"📊 Executive Dashboard", path:"/dashboard"},
-{label:"👤 Employee 360", path:"/employee-360"},
-{label:"🧩 Skill Gap Analysis", path:"/skill-gap"},
-{label:"🤖 AI Recommendation", path:"/ai-recommendation"},
-{label:"🚀 AI Hiring", path:"/ai-hiring"},
-{label:"👥 Human Review", path:"/human-review"},
-{label:"📂 Dataset Comparison", path:"/dataset-comparison"},
-{label:"⚙ Data Pipeline", path:"/data-pipeline"},
-{label:"🎯 Platform Strategy", path:"/platform-strategy"},
-{label:"ℹ About", path:"/about"}
-].map(item=>(
-
-<Link
-key={item.label}
-to={item.path}
-style={{
-display:"block",
-padding:"14px",
-marginTop:"8px",
-borderRadius:"12px",
-color:"#fff",
-textDecoration:"none",
-background:
-item.path==="/employee-360"
-?"#2563eb"
-:"transparent",
-transition:"0.3s"
-}}
-
-onMouseEnter={(e)=>
-e.currentTarget.style.background="#1e40af"
-}
-
-onMouseLeave={(e)=>
-e.currentTarget.style.background=
-item.path==="/employee-360"
-?"#2563eb"
-:"transparent"
-}
-
->
-{item.label}
-</Link>
-
-))
-}
-
-
-</aside>
+<Sidebar />
 
 
 

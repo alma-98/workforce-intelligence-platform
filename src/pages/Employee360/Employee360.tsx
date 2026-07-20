@@ -36,6 +36,22 @@ lineHeight:"1.8"
 export default function Employee360(){
 
 const [fileName,setFileName]=useState("");
+const [processing,setProcessing]=useState(false);
+const [completed,setCompleted]=useState(false);
+
+
+const startProcessing=()=>{
+
+setProcessing(true);
+
+setTimeout(()=>{
+setProcessing(false);
+setCompleted(true);
+},3000);
+
+};
+
+
 
 const handleUpload=(e:any)=>{
 const file=e.target.files[0];
@@ -126,6 +142,61 @@ display:"none"
 />
 
 </label>
+
+
+{
+fileName &&
+
+<button
+style={{
+marginTop:"20px",
+padding:"12px 22px",
+borderRadius:"12px",
+background:"#2563eb",
+color:"#fff",
+border:"none",
+cursor:"pointer",
+fontWeight:700
+}}
+
+onClick={startProcessing}
+>
+🤖 Start AI Processing
+</button>
+
+}
+
+{
+processing &&
+
+<p style={{color:"#38bdf8"}}>
+🤖 AI Processing...
+
+<br/>
+✓ Reading Excel
+<br/>
+✓ Validating Employee ID
+<br/>
+✓ Detecting Missing Skill
+<br/>
+✓ Normalizing Job Title
+<br/>
+✓ Creating Employee Profile
+</p>
+
+}
+
+
+{
+completed &&
+
+<p style={{color:"#22c55e"}}>
+✓ AI Processing Completed
+<br/>
+Employee Intelligence Ready
+</p>
+
+}
 
 
 {

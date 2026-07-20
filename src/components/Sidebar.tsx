@@ -133,31 +133,45 @@ animation:rocketOrbit 1.2s ease-in-out;
 }
 
 
-@keyframes rocketOrbit{
+
+.rocket-logo{
+display:inline-block;
+position:relative;
+transition:.3s;
+}
+
+.brand-link:hover .rocket-logo{
+animation:rocketCircle 2s ease-in-out;
+}
+
+@keyframes rocketCircle{
 
 0%{
 transform:translate(0,0) rotate(0deg);
 }
 
 20%{
-transform:translate(35px,-25px) rotate(72deg);
+transform:translate(35px,-25px) rotate(90deg);
 }
 
 40%{
-transform:translate(80px,0) rotate(144deg);
+transform:translate(80px,0) rotate(180deg);
 }
 
 60%{
-transform:translate(35px,25px) rotate(216deg);
+transform:translate(35px,25px) rotate(270deg);
 }
 
 80%{
-transform:translate(-20px,0) rotate(288deg);
+transform:translate(-15px,0) rotate(330deg);
 }
 
 100%{
 transform:translate(0,0) rotate(360deg);
 }
+
+}
+
 
 }
 

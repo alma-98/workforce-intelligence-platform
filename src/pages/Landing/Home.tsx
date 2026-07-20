@@ -40,7 +40,7 @@ export default function Home() {
             lineHeight: 1.15,
           }}
         >
-          <a href="https://investment-tech-indonesia.web.app/" target="_blank" rel="noopener noreferrer" style={{color:"#fff",textDecoration:"none"}}>Workforce Intelligence Platform Powered Investment Technology Indonesia</a>
+          <a href="https://investment-tech-indonesia.web.app/" target="_blank" rel="noopener noreferrer" style={{color:"#fff",textDecoration:"none"}}><a href="https://investment-tech-indonesia.web.app/" target="_blank" rel="noopener noreferrer" style={{color:"#fff",textDecoration:"none"}}>Workforce Intelligence Platform Powered Investment Technology Indonesia</a> Powered Investment Technology Indonesia</a>
         </h1>
 
         <p

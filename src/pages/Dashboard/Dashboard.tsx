@@ -308,6 +308,8 @@ Investment Technology Indonesia
 </footer>
 
 
+</main>
+
 </div>
 
 )

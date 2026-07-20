@@ -1,8 +1,8 @@
+import { useState } from "react";
 import Sidebar from "../../components/Sidebar";
 
 
-const Card=(
-{
+const Box=({
 title,
 children
 }:{
@@ -12,8 +12,8 @@ children:any
 <div
 style={{
 background:"#0f172a",
-padding:"25px",
-borderRadius:"20px",
+padding:"24px",
+borderRadius:"18px",
 border:"1px solid rgba(255,255,255,.08)"
 }}
 >
@@ -33,10 +33,18 @@ lineHeight:"1.8"
 )
 
 
-
 export default function Employee360(){
 
-return(
+const [fileName,setFileName]=useState("");
+
+const handleUpload=(e:any)=>{
+const file=e.target.files[0];
+if(file){
+setFileName(file.name);
+}
+};
+
+return (
 
 <div
 style={{
@@ -71,82 +79,151 @@ color:"#94a3b8",
 fontSize:"18px"
 }}
 >
-AI Workforce Intelligence Profile powered by employee data,
-skill intelligence and decision AI.
+AI Employee Intelligence Profile powered by Workforce Data Platform.
 </p>
 
+
+
+<Box title="📥 Data Source">
+
+<p>
+Upload Employee Dataset
+</p>
+
+<input
+type="file"
+accept=".xlsx,.csv"
+onChange={handleUpload}
+/>
+
+
+{
+fileName &&
+
+<div
+style={{
+marginTop:"15px"
+}}
+>
+
+<p>
+Dataset:
+<b>{fileName}</b>
+</p>
+
+
+<p>
+Records:
+Waiting AI Processing
+</p>
+
+
+<p>
+Data Status:
+<span style={{color:"#facc15"}}>
+Validation Required
+</span>
+</p>
+
+
+<p>
+AI Processing:
+Pending
+</p>
+
+</div>
+
+}
+
+
+{
+!fileName &&
+
+<p
+style={{
+color:"#94a3b8"
+}}
+>
+No dataset uploaded
+</p>
+
+}
+
+
+</Box>
 
 
 
 <div
 style={{
 display:"grid",
-gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",
+gridTemplateColumns:"repeat(auto-fit,minmax(260px,1fr))",
 gap:"20px",
-marginTop:"30px"
+marginTop:"25px"
 }}
 >
 
 
-<Card title="👤 Employee Identity">
+<Box title="👤 Employee Profile">
 
 <p>
-Employee:
-<b> Ahmad Santoso</b>
+Name:
+Ahmad Santoso
 </p>
 
 <p>
-Unified ID:
-MN-EMP-0002938
+Employee ID:
+EMP-00123
 </p>
 
 <p>
-Source:
-SAP SuccessFactors + Workable
+Department:
+Clinical Operation
 </p>
 
 <p>
-Identity Confidence:
-<span style={{color:"#22c55e"}}>
-94%
-</span>
+Position:
+Senior Nurse
 </p>
 
-</Card>
+</Box>
 
 
 
-
-<Card title="🧠 Workforce Readiness Score">
+<Box title="🧠 AI Workforce Readiness">
 
 <h1>
 82%
 </h1>
 
 <p>
-Digital Readiness: 65%
+Digital Readiness:
+70%
 </p>
 
 <p>
-Future Role Fit: 88%
+Future Role Fit:
+88%
 </p>
 
 <p>
-AI Confidence: 91%
+AI Confidence:
+91%
 </p>
 
-</Card>
+</Box>
 
 
 
-<Card title="🧩 Skill Intelligence">
+
+<Box title="🧩 Skill Intelligence">
 
 <p>
-Clinical Knowledge
+Clinical Skill
 </p>
 
 <p>
-██████████ 92%
+██████████ 95%
 </p>
 
 
@@ -167,61 +244,63 @@ AI Literacy
 ███░░░░░░░ 30%
 </p>
 
-</Card>
+</Box>
 
 
 
-<Card title="📈 Performance Intelligence">
+
+<Box title="🤖 AI Skill Inference">
 
 <p>
-Performance Score:
-<b>88%</b>
+Missing skill detected from dataset.
 </p>
 
 <p>
-Productivity Risk:
-LOW
+AI Prediction:
 </p>
 
 <p>
-Performance Trend:
-Growing
+Digital Healthcare Skill
+70%
 </p>
 
-</Card>
-
-
-
-<Card title="🤖 AI Skill Inference">
-
-<p>
-Missing Skill Record Detected
-</p>
-
-<p>
-AI inferred:
-
-<br/>
-
-AI Literacy:
-45%
-
-</p>
 
 <p>
 Confidence:
-76%
+82%
 </p>
+
 
 <p>
 ⚠ Human Review Required
 </p>
 
-</Card>
+</Box>
 
 
 
-<Card title="🎯 Career Prediction">
+<Box title="📈 Performance Intelligence">
+
+<p>
+Performance Score:
+88%
+</p>
+
+<p>
+Productivity:
+High
+</p>
+
+<p>
+Trend:
+Increasing
+</p>
+
+</Box>
+
+
+
+<Box title="🎯 Career Prediction">
 
 <p>
 Current Role:
@@ -230,6 +309,7 @@ Senior Nurse
 
 </p>
 
+
 <p>
 AI Future Role:
 
@@ -237,17 +317,18 @@ Healthcare Data Specialist
 
 </p>
 
+
 <p>
 Readiness:
-
 72%
 
 </p>
 
-</Card>
+</Box>
 
 
-<Card title="⚠ Risk Detection">
+
+<Box title="⚠ Risk Detection">
 
 <p>
 Skill Obsolescence:
@@ -255,30 +336,54 @@ MEDIUM
 </p>
 
 <p>
-Attrition Risk:
-MEDIUM
+Retention Risk:
+LOW
 </p>
 
 <p>
-Reason:
+Digital Adoption Risk:
+MEDIUM
+</p>
 
-Low digital adoption
+</Box>
+
+
+
+<Box title="📚 Training Recommendation">
+
+<p>
+Recommended Program:
 
 </p>
 
-</Card>
+<ul>
+
+<li>
+AI Healthcare Fundamentals
+</li>
+
+<li>
+Data Analytics
+</li>
+
+<li>
+Digital Transformation
+</li>
+
+</ul>
+
+</Box>
 
 
 </div>
 
 
 
-
 <section
 style={{
 marginTop:"30px",
-background:"rgba(37,99,235,.15)",
 padding:"30px",
+background:"rgba(37,99,235,.15)",
 borderRadius:"20px"
 }}
 >
@@ -290,8 +395,8 @@ borderRadius:"20px"
 
 
 <p>
-AI detected strong operational capability,
-but digital capability gap may impact future workforce readiness.
+Based on employee analysis,
+AI detected capability gaps that may impact future workforce readiness.
 </p>
 
 
@@ -300,21 +405,9 @@ Recommended Action:
 </h3>
 
 
-<ul>
-
-<li>
-Launch AI Healthcare Upskilling Program
-</li>
-
-<li>
-Create Individual Development Plan
-</li>
-
-<li>
-Prepare Future Leadership Pipeline
-</li>
-
-</ul>
+<p>
+Launch AI Healthcare Upskilling Program for selected employees.
+</p>
 
 
 </section>
@@ -322,12 +415,11 @@ Prepare Future Leadership Pipeline
 
 
 
-
 <section
 style={{
-marginTop:"30px",
-background:"#0f172a",
+marginTop:"25px",
 padding:"30px",
+background:"#0f172a",
 borderRadius:"20px"
 }}
 >
@@ -344,17 +436,16 @@ Assign Training
 
 
 <button style={{marginLeft:"10px"}}>
-Human Review
+Send Human Review
 </button>
 
 
 <button style={{marginLeft:"10px"}}>
-Update Skill Profile
+Update Employee Data
 </button>
 
 
 </section>
-
 
 
 
@@ -366,3 +457,4 @@ Update Skill Profile
 )
 
 }
+

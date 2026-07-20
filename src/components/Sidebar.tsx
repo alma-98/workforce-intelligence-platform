@@ -49,16 +49,7 @@ e.currentTarget.style.textShadow="none";
 >
 <h2>
 <span
-style={{
-display:"inline-block",
-transition:"transform .6s ease"
-}}
-onMouseEnter={(e)=>{
-e.currentTarget.style.transform="rotate(360deg)";
-}}
-onMouseLeave={(e)=>{
-e.currentTarget.style.transform="rotate(0deg)";
-}}
+className="rocket-logo"
 >
 🚀
 </span>

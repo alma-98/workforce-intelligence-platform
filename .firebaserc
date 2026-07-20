@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "workforceip-eb8ee"
+  },
+  "targets": {
+    "workforceip-eb8ee": {
+      "hosting": {
+        "main": [
+          "workforceip"
+        ]
+      }
+    }
+  }
+}

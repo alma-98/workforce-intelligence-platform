@@ -44,6 +44,7 @@ const [completed,setCompleted]=useState(false);
 const [employee,setEmployee]=useState<EmployeePrediction|null>(null);
 
 const [employees, setEmployees] = useState<EmployeePrediction[]>([]);
+const [selectedIndex, setSelectedIndex] = useState(0);
 
 
 const selectEmployee=(employeeId:string)=>{
@@ -293,8 +294,8 @@ Dataset:
 <br/>
 
 <select
-value={employee?.employeeId??""}
-onChange={(e)=>selectEmployee(e.target.value)}
+value={selectedIndex}
+onChange={(e)=>{const idx=Number(e.target.value);setSelectedIndex(idx);selectEmployee(e.target.value);}}
 style={{
 padding:"10px",
 width:"320px",
@@ -305,10 +306,10 @@ marginTop:"8px"
 
 <option value="">Choose Employee</option>
 
-{employees.map(emp=>(
+{employees.map((emp,index)=>(
 <option
 key={emp.employeeId}
-value={emp.employeeId}
+value={index}
 >
 {emp.name} ({emp.employeeId})
 </option>

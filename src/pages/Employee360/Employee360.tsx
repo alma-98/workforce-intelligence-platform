@@ -43,6 +43,9 @@ const [completed,setCompleted]=useState(false);
 
 const [employee,setEmployee]=useState<EmployeePrediction|null>(null);
 
+const [employees, setEmployees] = useState<EmployeePrediction[]>([]);
+
+
 const selectEmployee=(employeeId:string)=>{
 
     const found=employees.find(e=>e.employeeId===employeeId);
@@ -57,14 +60,26 @@ const selectEmployee=(employeeId:string)=>{
 
 
 
-const [employees,setEmployees]=useState<EmployeePrediction[]>([]);
 
 const [file,setFile]=useState<File|null>(null);
 
 
 
 
+
+const resetEmployee360=()=>{
+
+    setEmployee(null);
+    setEmployees([]);
+    setCompleted(false);
+    setFile(null);
+    setFileName("");
+    setProcessing(false);
+
+};
+
 const startProcessing=async()=>{
+
 
     if(!file){
 
@@ -79,6 +94,13 @@ const startProcessing=async()=>{
     try{
 
         const result=await parseEmployeeExcel(file);
+
+        setEmployees(result);
+
+        console.log("========== EMPLOYEES ==========");
+        console.table(result);
+        console.log("Total Employees:",result.length);
+
 
         setEmployees(result);
 
@@ -109,9 +131,12 @@ const startProcessing=async()=>{
 
 
 
-const handleUpload=(e:any)=>{
 
-    const selected=e.target.files?.[0];
+const handleUpload = async (
+    e: React.ChangeEvent<HTMLInputElement>
+) => {
+
+    const selected = e.target.files?.[0];
 
     if(!selected) return;
 
@@ -119,9 +144,20 @@ const handleUpload=(e:any)=>{
 
     setFileName(selected.name);
 
+    const result = await parseEmployeeExcel(selected);
+
+    setEmployees(result);
+
+    if(result.length>0){
+
+        setEmployee(result[0]);
+
+    }
+
     setCompleted(false);
 
 };
+
 
 
 return (
@@ -229,6 +265,8 @@ whiteSpace:"nowrap"
 🤖 Start AI Processing
 
 </button>
+
+<button onClick={resetEmployee360} style={{background:"#ef4444",color:"white",border:"none",borderRadius:"8px",padding:"12px 20px",cursor:"pointer"}}>↺ Reset</button>
 
 
 </div>

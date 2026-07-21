@@ -49,6 +49,7 @@ const [selectedIndex, setSelectedIndex] = useState(0);
 
 const selectEmployee=(index:string)=>{
     const idx = Number(index);
+    console.log("Selected:", idx, employees[idx]);
     if(!Number.isNaN(idx) && employees[idx]){
         setEmployee(employees[idx]);
     }

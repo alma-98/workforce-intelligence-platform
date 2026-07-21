@@ -221,7 +221,7 @@ whiteSpace:"nowrap"
 }}
 >
 
-📥 Upload Employee Dataset
+📥 Step 1 - Upload Employee Dataset
 
 <input
 type="file"
@@ -252,7 +252,7 @@ whiteSpace:"nowrap"
 }}
 >
 
-🤖 Start AI Processing
+🤖 Analyze Employee Dataset
 
 </button>
 
@@ -278,7 +278,7 @@ Dataset:
 
 <div style={{marginTop:"16px"}}>
 
-<label><b>Select Employee</b></label>
+<label><b>Step 2 - Select Employee</b></label>
 
 <br/>
 
@@ -378,7 +378,7 @@ marginTop:"25px"
 
 
 
-<Box title="👤 Employee Profile">
+<Box title="Step 3 - 👤 Employee Profile">
 
 <p>
 Name:

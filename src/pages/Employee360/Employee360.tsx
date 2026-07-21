@@ -190,7 +190,7 @@ AI Employee Intelligence Profile powered by Workforce Data Platform.
 <Box title="📥 Data Source">
 
 <p>
-Upload Employee Dataset
+Employee Dataset
 </p>
 
 
@@ -206,8 +206,8 @@ gap:"12px"
 
 <label
 style={{
-width:"220px",
-height:"42px",
+width:"180px",
+height:"48px",
 display:"flex",
 alignItems:"center",
 justifyContent:"center",
@@ -221,7 +221,7 @@ whiteSpace:"nowrap"
 }}
 >
 
-📥 Step 1 - Upload Employee Dataset
+📥 Step 1 - Employee Dataset
 
 <input
 type="file"
@@ -239,8 +239,8 @@ display:"none"
 disabled={!employee}
 onClick={startProcessing}
 style={{
-width:"220px",
-height:"42px",
+width:"180px",
+height:"48px",
 background:"#2563eb",
 color:"#fff",
 border:"none",
@@ -252,22 +252,27 @@ whiteSpace:"nowrap"
 }}
 >
 
-🤖 Analyze Employee Dataset
+🤖 Analyze Dataset
 
 </button>
 
-<button onClick={resetEmployee360} style={{background:"#ef4444",color:"white",border:"none",borderRadius:"8px",padding:"12px 20px",cursor:"pointer"}}>↺ Reset</button>
+<button onClick={resetEmployee360} style={{background:"#ef4444",color:"white",border:"none",borderRadius:"12px",padding:"0 24px",cursor:"pointer"}}>↺ Reset</button>
 
 
 </div>
 
+<div style={{height:"24px"}}></div>
 
 {
 fileName &&
 
 <div
 style={{
-marginTop:"20px"
+marginTop:"8px",
+padding:"20px",
+background:"#0f172a",
+borderRadius:"12px",
+border:"1px solid rgba(255,255,255,.08)"
 }}
 >
 
@@ -293,7 +298,7 @@ selectEmployee(e.target.value);
 style={{
 padding:"10px",
 width:"320px",
-borderRadius:"8px",
+borderRadius:"12px",
 marginTop:"8px"
 }}
 >
@@ -310,6 +315,8 @@ value={index}
 ))}
 
 </select>
+
+</div>
 
 </div>
 

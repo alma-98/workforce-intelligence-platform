@@ -187,9 +187,11 @@ AI Employee Intelligence Profile powered by Workforce Data Platform.
 
 
 
-<Box title="📂 Employee Dataset">
+<Box title="📥 Data Source">
 
-
+<p>
+Employee Dataset
+</p>
 
 
 <div
@@ -212,14 +214,14 @@ justifyContent:"center",
 background:"#2563eb",
 color:"#fff",
 borderRadius:"12px",
-cursor:"pointer",
-opacity:1,
+cursor:employee?"pointer":"not-allowed",
+opacity:employee?1:0.5,
 fontWeight:700,
 whiteSpace:"nowrap"
 }}
 >
 
-📂 Choose Excel File
+📥 Step 1 - Employee Dataset
 
 <input
 type="file"
@@ -234,7 +236,7 @@ display:"none"
 
 
 <button
-disabled={!file}
+disabled={!employee}
 onClick={startProcessing}
 style={{
 width:"180px",
@@ -243,8 +245,8 @@ background:"#2563eb",
 color:"#fff",
 border:"none",
 borderRadius:"12px",
-cursor:"pointer",
-opacity:1,
+cursor:employee?"pointer":"not-allowed",
+opacity:employee?1:0.5,
 fontWeight:700,
 whiteSpace:"nowrap"
 }}
@@ -276,7 +278,8 @@ border:"1px solid rgba(255,255,255,.08)"
 
 <h3 style={{margin:'0 0 12px 0'}}>📁 Dataset Information</h3>
 
-<p><b>File</b><br/>
+<p>
+File:
 <b>{fileName}</b>
 </p>
 
@@ -317,15 +320,18 @@ value={index}
 
 </div>
 
-<hr/><p><b>Total Employees</b><br/>
+<p>
+Total Employees:
 {employees.length===0?"Waiting AI Processing":employees.length}
 </p>
 
-<p><b>Validation Status</b><br/>
+<p>
+Validation Status:
 {employees.length>0?"Validated":"Validation Required"}
 </p>
 
-<p><b>Processing Status</b><br/>
+<p>
+Processing Status:
 {completed?"Completed":"Pending"}
 </p>
 

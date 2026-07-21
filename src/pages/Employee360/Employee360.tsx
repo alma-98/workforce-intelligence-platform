@@ -102,12 +102,17 @@ AI Employee Intelligence Profile powered by Workforce Data Platform.
 
 <Box title="📥 Data Source">
 
+<p>
+Upload Employee Dataset
+</p>
+
+
 <div
 style={{
 display:"flex",
+flexDirection:"row",
 alignItems:"center",
-gap:"12px",
-marginTop:"15px"
+gap:"12px"
 }}
 >
 
@@ -166,44 +171,8 @@ whiteSpace:"nowrap"
 
 
 {
-processing &&
-<p
-style={{
-color:"#38bdf8",
-marginTop:"15px"
-}}
->
-🤖 AI Processing...
-
-<br/>
-✓ Reading Excel
-<br/>
-✓ Validating Employee ID
-<br/>
-✓ Detecting Missing Skill
-<br/>
-✓ Creating Employee Profile
-</p>
-}
-
-
-{
-completed &&
-<p
-style={{
-color:"#22c55e",
-marginTop:"15px"
-}}
->
-✓ AI Processing Completed
-<br/>
-Employee Intelligence Ready
-</p>
-}
-
-
-{
 fileName &&
+
 <div
 style={{
 marginTop:"20px"
@@ -230,7 +199,25 @@ AI Processing:
 Pending
 </p>
 
+
 </div>
+
+}
+
+
+{
+completed &&
+
+<p
+style={{
+color:"#22c55e"
+}}
+>
+✓ AI Processing Completed
+<br/>
+Employee Intelligence Ready
+</p>
+
 }
 
 

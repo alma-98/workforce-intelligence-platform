@@ -22,10 +22,10 @@ const num=(v:any,d=0)=>{
 
 export function predictEmployee(row:any):EmployeePrediction{
 
-  const performance=num(row["Performance Score"]??row["Performance"],75);
+  const performance=num(row["Performance_Score"] ?? row["Performance Score"] ?? row["Performance"],75);
   const digital=num(row["Digital Readiness"]??row["Digital Skill"],60);
-  const training=num(row["Training Hours"],20);
-  const tenure=num(row["Years of Service"]??row["Tenure"],3);
+  const training=num(row["Training_History"] ?? row["Training Hours"],20);
+  const tenure=num(row["Years_of_Service"] ?? row["Years of Service"] ?? row["Tenure"],3);
 
   const workforce=Math.round(
       performance*0.45+

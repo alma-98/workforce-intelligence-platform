@@ -214,7 +214,8 @@ justifyContent:"center",
 background:"#2563eb",
 color:"#fff",
 borderRadius:"12px",
-cursor:"pointer",
+cursor:employee?"pointer":"not-allowed",
+opacity:employee?1:0.5,
 fontWeight:700,
 whiteSpace:"nowrap"
 }}
@@ -235,6 +236,7 @@ display:"none"
 
 
 <button
+disabled={!employee}
 onClick={startProcessing}
 style={{
 width:"220px",
@@ -243,7 +245,8 @@ background:"#2563eb",
 color:"#fff",
 border:"none",
 borderRadius:"12px",
-cursor:"pointer",
+cursor:employee?"pointer":"not-allowed",
+opacity:employee?1:0.5,
 fontWeight:700,
 whiteSpace:"nowrap"
 }}
@@ -280,8 +283,13 @@ Dataset:
 <br/>
 
 <select
+disabled={employees.length===0}
 value={selectedIndex}
-onChange={(e)=>{const idx=Number(e.target.value);setSelectedIndex(idx);selectEmployee(e.target.value);}}
+onChange={(e)=>{
+const idx=Number(e.target.value);
+setSelectedIndex(idx);
+selectEmployee(e.target.value);
+}}
 style={{
 padding:"10px",
 width:"320px",

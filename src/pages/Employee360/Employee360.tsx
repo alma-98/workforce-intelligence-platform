@@ -47,16 +47,11 @@ const [employees, setEmployees] = useState<EmployeePrediction[]>([]);
 const [selectedIndex, setSelectedIndex] = useState(0);
 
 
-const selectEmployee=(employeeId:string)=>{
-
-    const found=employees.find(e=>e.employeeId===employeeId);
-
-    if(found){
-
-        setEmployee(found);
-
+const selectEmployee=(index:string)=>{
+    const idx = Number(index);
+    if(!Number.isNaN(idx) && employees[idx]){
+        setEmployee(employees[idx]);
     }
-
 };
 
 
@@ -107,6 +102,7 @@ const startProcessing=async()=>{
 
         if(result.length>0){
 
+            setSelectedIndex(0);
             setEmployee(result[0]);
 
         }
@@ -144,18 +140,7 @@ const handleUpload = async (
     setFile(selected);
 
     setFileName(selected.name);
-
-    const result = await parseEmployeeExcel(selected);
-
-    setEmployees(result);
-
-    if(result.length>0){
-
-        setEmployee(result[0]);
-
-    }
-
-    setCompleted(false);
+setCompleted(false);
 
 };
 

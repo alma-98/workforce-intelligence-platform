@@ -276,6 +276,63 @@ border:"1px solid rgba(255,255,255,.08)"
 
 <h3 style={{margin:'0 0 12px 0'}}>📁 Dataset Information</h3>
 
+<div
+style={{
+display:"flex",
+justifyContent:"space-between",
+alignItems:"center",
+marginBottom:"18px"
+}}
+>
+
+<div>
+<b>{fileName}</b>
+</div>
+
+<div
+style={{
+display:"flex",
+gap:"10px"
+}}
+>
+
+<button
+disabled={!file}
+onClick={startProcessing}
+style={{
+background:"#2563eb",
+color:"#fff",
+border:"none",
+padding:"10px 18px",
+borderRadius:"10px",
+cursor:file?"pointer":"not-allowed",
+opacity:file?1:0.5,
+fontWeight:600
+}}
+>
+🤖 Analyze Data
+</button>
+
+<button
+onClick={resetEmployee360}
+style={{
+background:"#ef4444",
+color:"#fff",
+border:"none",
+padding:"10px 18px",
+borderRadius:"10px",
+cursor:"pointer",
+fontWeight:600
+}}
+>
+↺ Reset
+</button>
+
+</div>
+
+</div>
+
+
 <p><b>File</b><br/>
 <b>{fileName}</b>
 </p>

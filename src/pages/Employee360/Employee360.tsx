@@ -276,14 +276,16 @@ border:"1px solid rgba(255,255,255,.08)"
 }}
 >
 
+<h3 style={{margin:'0 0 12px 0'}}>📁 Dataset Information</h3>
+
 <p>
-Dataset:
+File:
 <b>{fileName}</b>
 </p>
 
 <div style={{marginTop:"16px"}}>
 
-<label><b>Step 2 - Select Employee</b></label>
+<label><b>👥 Select Employee</b></label>
 
 <br/>
 
@@ -318,22 +320,18 @@ value={index}
 
 </div>
 
-</div>
-
-
-
 <p>
-Records:
+Total Employees:
 {employees.length===0?"Waiting AI Processing":employees.length}
 </p>
 
 <p>
-Data Status:
+Validation Status:
 {employees.length>0?"Validated":"Validation Required"}
 </p>
 
 <p>
-AI Processing:
+Processing Status:
 {completed?"Completed":"Pending"}
 </p>
 

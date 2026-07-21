@@ -337,7 +337,18 @@ fontWeight:600
 <b>{fileName}</b>
 </p>
 
-<div style={{marginTop:"16px"}}>
+<div
+style={{
+display:"flex",
+justifyContent:"space-between",
+alignItems:"flex-end",
+marginTop:"20px",
+marginBottom:"20px",
+gap:"20px"
+}}
+>
+
+<div style={{flex:1}}>
 
 <label><b>👥 Select Employee</b></label>
 
@@ -353,8 +364,9 @@ selectEmployee(e.target.value);
 }}
 style={{
 padding:"10px",
-width:"320px",
-borderRadius:"12px",
+width:"100%",
+maxWidth:"360px",
+borderRadius:"10px",
 marginTop:"8px"
 }}
 >
@@ -371,6 +383,51 @@ value={index}
 ))}
 
 </select>
+
+</div>
+
+<div
+style={{
+display:"flex",
+flexDirection:"column",
+gap:"10px",
+width:"180px"
+}}
+>
+
+<button
+disabled={!file}
+onClick={startProcessing}
+style={{
+height:"46px",
+background:"#2563eb",
+color:"#fff",
+border:"none",
+borderRadius:"10px",
+fontWeight:600,
+cursor:file?"pointer":"not-allowed",
+opacity:file?1:0.5
+}}
+>
+🤖 Analyze Data
+</button>
+
+<button
+onClick={resetEmployee360}
+style={{
+height:"46px",
+background:"#ef4444",
+color:"#fff",
+border:"none",
+borderRadius:"10px",
+fontWeight:600,
+cursor:"pointer"
+}}
+>
+↺ Reset
+</button>
+
+</div>
 
 </div>
 

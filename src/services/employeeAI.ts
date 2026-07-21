@@ -64,13 +64,32 @@ export function predictEmployee(row:any):EmployeePrediction{
 
   return{
 
-      name:row["Employee Name"]||row["Name"]||"Unknown",
+      name:
+          row["Employee Name"] ??
+          row["Name"] ??
+          row["Employee_Name"] ??
+          row["Full Name"] ??
+          "Unknown",
 
-      employeeId:row["Employee ID"]||row["EmployeeID"]||"-",
+      employeeId:
+          row["Employee ID"] ??
+          row["EmployeeID"] ??
+          row["Employee Id"] ??
+          row["ID"] ??
+          row["Emp ID"] ??
+          "",
 
-      department:row["Department"]||"-",
+      department:
+          row["Department"] ??
+          row["Dept"] ??
+          row["Division"] ??
+          "",
 
-      position:row["Position"]||"-",
+      position:
+          row["Position"] ??
+          row["Job Title"] ??
+          row["Role"] ??
+          "",
 
       workforceReadiness:workforce,
 
